@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 app = FastAPI()
 
 class User(BaseModel):
+    
     username: str
     password: str
 
