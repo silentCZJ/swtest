@@ -1,7 +1,7 @@
 import os
 
-temp_path = r'C:\Users\CAI\Documents\swtest\temp'
-report_path = r'C:\Users\CAI\Documents\swtest\report'
+temp_path = '../temp'
+report_path = '../report'
 
 def generate_report():
     os.system(f'allure generate {temp_path} -o {report_path} --clean')
