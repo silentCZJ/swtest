@@ -1,6 +1,6 @@
 import logging
 
-class MyLogger:
+class LoggerUtil:
     _instance = None
 
     def __new__(cls):
@@ -10,11 +10,11 @@ class MyLogger:
         return cls._instance
 
     def _logger_setup(self):
-        self.logger = logging.getLogger('AOI-BEZEL')
+        self.logger = logging.getLogger('mylogger')
         self.logger.setLevel(logging.INFO)
 
         date_format = "%Y-%m-%d %H:%M:%S"
-        fh = logging.FileHandler('./log.txt', mode='a', encoding='utf-8')
+        fh = logging.FileHandler('./PytestLog/log.txt', mode='a', encoding='utf-8')
         sh = logging.StreamHandler()
 
         fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt=date_format)
