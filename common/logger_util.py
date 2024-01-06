@@ -17,7 +17,7 @@ class LoggerUtil:
         fh = logging.FileHandler('./PytestLog/log.txt', mode='a', encoding='utf-8')
         sh = logging.StreamHandler()
 
-        fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt=date_format)
+        fmt = logging.Formatter('%(asctime)s - %(levelname)s - <%(filename)s:%(lineno)s> - %(message)s', datefmt=date_format)
         fh.setFormatter(fmt=fmt)
         sh.setFormatter(fmt=fmt)
 
